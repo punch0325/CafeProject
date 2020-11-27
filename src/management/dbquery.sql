@@ -1,0 +1,83 @@
+DROP TABLE COFFELIST;
+CREATE TABLE COFFELIST(
+    COFFEMENU NVARCHAR2(15) CONSTRAINT PK_COFFE PRIMARY KEY,
+    CMENUNUM NUMBER(2) NOT NULL,
+    COFFESTOCK NUMBER(2) NOT NULL,
+    COFFEPRICE NUMBER(5) NOT NULL,
+    COFFEHITS NUMBER(5) NOT NULL );
+
+DROP SEQUENCE SEQ_COFFE;
+CREATE SEQUENCE SEQ_COFFE
+    START WITH 1
+    INCREMENT BY 1 
+    NOCACHE;   
+     
+SELECT * FROM COFFELIST ORDER BY COFFEHITS DESC;
+---------------------------------------------------------------------------------------------------------------------------------------------------------     
+DROP TABLE TEALIST;
+CREATE TABLE TEALIST(
+    TEAMENU NVARCHAR2(15) CONSTRAINT PK_TEA PRIMARY KEY,
+    TMENUNUM NUMBER(2) NOT NULL,
+    TEASTOCK NUMBER(2) NOT NULL,
+    TEAPRICE NUMBER(5) NOT NULL,
+    TEAHITS NUMBER(5) NOT NULL );
+    
+DROP SEQUENCE SEQ_TEA;
+CREATE SEQUENCE SEQ_TEA
+    START WITH 1
+    INCREMENT BY 1 
+    NOCACHE;   
+    
+SELECT * FROM TEALIST;
+---------------------------------------------------------------------------------------------------------------------------------------------------------   
+DROP TABLE SMOOTHIELIST;
+CREATE TABLE SMOOTHIELIST(
+    SMOOTHIEMENU NVARCHAR2(15)CONSTRAINT PK_SMOOTHIE PRIMARY KEY,
+    SMENUNUM NUMBER(2) NOT NULL,
+    SMOOTHIESTOCK NUMBER(2) NOT NULL,
+    SMOOTHIEPRICE NUMBER(5) NOT NULL,
+    SMOOTHIEHITS NUMBER(5) NOT NULL );
+   
+DROP SEQUENCE SEQ_SMOOTHIE;
+CREATE SEQUENCE SEQ_SMOOTHIE
+    START WITH 1
+    INCREMENT BY 1 
+    NOCACHE;   
+
+SELECT * FROM SMOOTHIELIST;
+--------------------------------------------------------------------------------------------------------------------------------------------------------- 
+DROP TABLE DESSERTLIST;
+CREATE TABLE DESSERTLIST(
+    DESSERTMENU NVARCHAR2(15) CONSTRAINT PK_DESSERT PRIMARY KEY,
+    DMENUNUM NUMBER(2) NOT NULL,
+    DESSERTSTOCK NUMBER(2) NOT NULL,
+    DESSERTPRICE NUMBER(5) NOT NULL,
+    DESSERTHITS NUMBER(5) NOT NULL );
+
+DROP SEQUENCE SEQ_DESSERT;
+CREATE SEQUENCE SEQ_DESSERT
+    START WITH 1
+    INCREMENT BY 1 
+    NOCACHE;  
+
+SELECT * FROM DESSERTLIST;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------  
+DROP TABLE STAMP;
+CREATE TABLE STAMP(
+    CPHONE NVARCHAR2(15) CONSTRAINT PK_STAMP PRIMARY KEY,
+    CNAME NVARCHAR2(20),
+    CSTAMP NUMBER(2));
+
+SELECT * FROM STAMP;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DROP TABLE CAFEDATE;
+CREATE TABLE CAFEDATE(
+PRICE NUMBER(5),
+SELECTDATE DATE);
+
+SELECT * FROM CAFEDATE;
+
+
+
+
